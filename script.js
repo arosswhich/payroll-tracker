@@ -32,7 +32,14 @@ alert(`Average Salary:${getAverageSalary(employeesArray)}`)
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
- 
+  const partialArray = employeesArray.map(({firstName, lastName}) => 
+  ({firstName: firstName, lastName: lastName}));
+  function getrandomEmployeeName(employees) {
+    return partialArray[ (Math.floor (Math.random() * partialArray.length))];
+  }
+  const randomEmployeeName = partialArray[ (Math.floor (Math.random() * partialArray.length))];
+console.log(randomEmployeeName);  
+alert(`Random Employee Name: ${randomEmployeeName.firstName} ${randomEmployeeName.lastName}`)
 }
 
 /*
